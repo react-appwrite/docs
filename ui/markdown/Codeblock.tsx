@@ -56,11 +56,11 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
           </Responsive>
         </div>
       )}
-      <div className="flex h-10 w-full items-center justify-between gap-4 border-b border-slate-300 py-1 px-4 dark:border-slate-700 dark:text-white">
+      <div className="flex h-10 w-full items-center justify-between gap-4 border-b border-slate-300 px-4 py-1 dark:border-slate-700 dark:text-white">
         <p className="border-r border-slate-300 pr-4 text-sm font-bold capitalize dark:border-slate-700">
           {language.replace("language-", "")}
         </p>
-        <nav className="relative flex h-full flex-1 flex-row items-center gap-2">
+        <nav className="relative flex h-full flex-1 flex-row items-center justify-end gap-2">
           {preview && (
             <>
               <div className="flex h-full w-full flex-row items-center gap-2">
@@ -69,9 +69,9 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
                 <ComputerScreen size={size} setSize={(e) => setSize(e)} />
               </div>
               <Dark dark={dark} setDark={() => setDark(!dark)} />
-              <Copy text={children.props.children} />
             </>
           )}
+          <Copy text={children.props.children} />
         </nav>
       </div>
       <div className="relative">
