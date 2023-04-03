@@ -30,20 +30,6 @@ pre > code[class*="language-"] {
   font-size: 1em;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  background: #f8fafc;
-}
-
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  background: #f8fafc;
-}
-
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
