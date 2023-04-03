@@ -3,6 +3,8 @@ import useWindowDimensions from "#/hooks/useWindowDimensions";
 import Content from "#/ui/layout/sidebar/Content";
 import SearchButton from "#/ui/layout/sidebar/Search";
 import Loading from "#/ui/loaders/Loader";
+import Image from "next/image";
+import VercelLogo from "public/images/vercel.svg";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
 
@@ -41,7 +43,7 @@ function Sidebar() {
         style={{ left: "max(0px,calc(50% - 45rem))" }}
         className={`fixed inset-0 top-16 right-auto z-20 flex w-full flex-col overflow-y-auto bg-white/90 px-8 pb-10 text-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90 dark:text-white md:w-[19.5rem]`}
       >
-        <nav id="nav" className="relative flex-1 space-y-4 py-6 lg:leading-6">
+        <nav id="nav" className="relative flex-1 py-6 space-y-4 lg:leading-6">
           <SearchButton />
           <ul>
             {!isLoading ? (
@@ -61,7 +63,7 @@ function Sidebar() {
             )}
           </ul>
         </nav>
-        <div className="w-full flex-none text-center text-sm font-bold dark:text-white">
+        <div className="flex-none w-full text-sm font-bold text-center dark:text-white">
           <p>
             Built with ❤️ and{" "}
             <a
@@ -72,6 +74,17 @@ function Sidebar() {
               CornDocs
             </a>
           </p>
+
+          <a
+            href="https://vercel.com?utm_source=react-appwrite&utm_campaign=oss"
+            className="self-center"
+          >
+            <Image
+              src={VercelLogo}
+              className="m-auto mt-4"
+              alt="Powered by Vercel"
+            />
+          </a>
         </div>
       </aside>
     )

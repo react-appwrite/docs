@@ -76,13 +76,7 @@ async function getHeadings(source: any) {
 }
 
 async function getFile(path: string): Promise<string> {
-  const files: string[] = [];
-
-  await glob(join(basePath, path).replace(/\\/g, "/")).then((matches) => {
-    files.push(...matches);
-  });
-
-  return files[0];
+  return join(basePath, path).replace('*', 'mdx')
 }
 
 async function getFileContent(path: string): Promise<FoldersProps> {
