@@ -29,6 +29,7 @@ async function cerealize(raw: string): Promise<Post> {
   const serialized = await serialize(raw, {
     parseFrontmatter: true,
     mdxOptions: {
+      development: process.env.NODE_ENV === "development",
       rehypePlugins: [slug],
       remarkPlugins: [remarkImageDimension, remarkGfm],
       format: "detect",
