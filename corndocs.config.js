@@ -9,7 +9,7 @@ module.exports = {
     algolia_index: "react_appwrite",
   },
   project: {
-    name: "React-Appwrite",
+    name: "React Appwrite",
     url: "https://react-appwrite.org/",
     github: {
       repo: "https://github.com/sanny-io/react-appwrite",
@@ -17,7 +17,7 @@ module.exports = {
     },
     logo: {
       src: "/static/logo.png",
-      alt: "React-Appwrite Logo",
+      alt: "React Appwrite Logo",
       size: [30, 30],
     },
     mainScreen: {
@@ -27,7 +27,7 @@ module.exports = {
         custom: {
           path: "index",
         },
-        title: "React-Appwrite.",
+        title: "React Appwrite",
         tagLine: "Gorgeous library for integrating React with Appwrite.",
       },
     },

@@ -1,11 +1,12 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
+import VercelLogo from "public/images/vercel.svg";
 
 export default function DisplayComponents() {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex w-full flex-col items-center">
-        <h1 className="2xl:px-30 mb-4 flex flex-col items-center text-4xl font-black text-slate-900 dark:text-white md:text-6xl lg:mb-8 lg:text-center lg:leading-tight">
+      <div className="flex flex-col items-center w-full">
+        <h1 className="flex flex-col items-center mb-4 text-4xl font-black 2xl:px-30 text-slate-900 dark:text-white md:text-6xl lg:mb-8 lg:text-center lg:leading-tight">
           <Image
             src="/static/logo.png"
             alt="React Appwrite Logo"
@@ -18,7 +19,7 @@ export default function DisplayComponents() {
           Gorgeous library for integrating React with Appwrite.
         </p>
       </div>
-      <div className="flex w-full flex-row items-center justify-center gap-2">
+      <div className="flex flex-row items-center justify-center w-full gap-2">
         <a href="https://www.npmjs.com/package/react-appwrite">
           <img
             alt="Latest npm version"
@@ -38,6 +39,18 @@ export default function DisplayComponents() {
           />
         </a>
       </div>
+
+      <a
+        href="https://vercel.com?utm_source=react-appwrite&utm_campaign=oss"
+        className="self-center"
+        target="_blank"
+      >
+        <Image
+          src={VercelLogo}
+          className="mt-4"
+          alt="Powered by Vercel"
+        />
+      </a>
     </div>
   );
 }

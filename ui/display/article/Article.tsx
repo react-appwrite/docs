@@ -29,13 +29,13 @@ export default function Article({ data }: { data: FoldersProps }) {
         className="md:pl-2"
       >
         <main>
-          <div className="container mx-auto py-6">
+          <div className="container py-6 mx-auto">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12">
-                <div className="flex grid-cols-12 flex-col-reverse xl:grid xl:gap-7">
+                <div className="flex flex-col-reverse grid-cols-12 xl:grid xl:gap-7">
                   <div className="col-span-12 xl:col-span-9">
                     <Breadcrumb data={router.query.slug} />
-                    <article className="prose prose-slate w-full max-w-none dark:prose-invert">
+                    <article className="w-full prose prose-slate max-w-none dark:prose-invert">
                       {data.content && <Markdown article={data.content} />}
                     </article>
                     <ArticleNavigation />
@@ -47,16 +47,15 @@ export default function Article({ data }: { data: FoldersProps }) {
                       )}
                     >
                       {corndocsConfig.project.github ? (
-                        <div className="mt-10 border-t border-slate-300 pt-4 dark:border-slate-700">
+                        <div className="pt-4 mt-10 border-t border-slate-300 dark:border-slate-700">
                           <a
                             className="flex items-center gap-2 text-xs font-bold"
                             target="_blank"
                             rel="noreferrer"
-                            href={`${corndocsConfig.project.github.repo}/edit/${
-                              corndocsConfig.project.github.usesMain
-                                ? "main"
-                                : "master"
-                            }/_posts/${data.path}.${data.extension}`}
+                            href={`${corndocsConfig.project.github.repo}/edit/${corndocsConfig.project.github.usesMain
+                              ? "main"
+                              : "master"
+                              }/_posts/${data.path}.${data.extension}`}
                           >
                             <Github size={12} />
                             <span>Edit on GitHub</span>
