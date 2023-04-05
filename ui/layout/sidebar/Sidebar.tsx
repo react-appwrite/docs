@@ -78,6 +78,7 @@ function Sidebar() {
           <a
             href="https://vercel.com?utm_source=react-appwrite&utm_campaign=oss"
             className="self-center"
+            target="_blank"
           >
             <Image
               src={VercelLogo}
